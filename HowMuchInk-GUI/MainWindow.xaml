@@ -1,0 +1,55 @@
+﻿<Window x:Class="HowMuchInk_GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="HowMuchInk : : : Julius Herb" Height="328.924" Width="849" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button Content="Analysieren" HorizontalAlignment="Left" Height="25" Margin="131,10,0,0" VerticalAlignment="Top" Width="116" Click="Button_Click"/>
+        <TextBox x:Name="PathInput" HorizontalAlignment="Left" Height="25" Margin="252,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="579"/>
+        <Label x:Name="CyanBox" Content="" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" Width="116" Background="Cyan"/>
+        <Label x:Name="MagentaBox" Content="" HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top" Width="116" Background="Magenta"/>
+        <Label x:Name="YellowBox" Content="" HorizontalAlignment="Left" Margin="10,159,0,0" VerticalAlignment="Top" Width="116" Background="Yellow"/>
+        <Label x:Name="BlackBox" Content="" HorizontalAlignment="Left" Margin="10,198,0,0" VerticalAlignment="Top" Width="116" Background="Black" Foreground="White"/>
+        <ListView x:Name="ResultView" Height="143" Margin="131,81,0,0" VerticalAlignment="Top" IsSynchronizedWithCurrentItem="True" HorizontalAlignment="Left" Width="700">
+            <ListView.View>
+                <GridView >
+                    <GridViewColumn>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox Tag="{Binding Select}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="File" DisplayMemberBinding="{Binding File}" Width="310"/>
+                    <GridViewColumn Header="Kopien" DisplayMemberBinding="{Binding Kopien}" Width="50"/>
+                    <GridViewColumn Header="Cyan" DisplayMemberBinding="{Binding Cyan}" Width="80"/>
+                    <GridViewColumn Header="Magenta" DisplayMemberBinding="{Binding Magenta}" Width="80"/>
+                    <GridViewColumn Header="Yellow" DisplayMemberBinding="{Binding Yellow}" Width="80"/>
+                    <GridViewColumn Header="Black" DisplayMemberBinding="{Binding Black}" Width="80"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label x:Name="StatusBox" Content="" HorizontalAlignment="Left" Margin="10,263,0,0" VerticalAlignment="Top" Width="821"/>
+        <Button x:Name="BrowseButton" Content="Browse" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Width="116" Click="BrowseButton_Click"/>
+        <ProgressBar x:Name="ProgressB" HorizontalAlignment="Left" Height="26" Margin="252,232,0,0" VerticalAlignment="Top" Width="579"/>
+        <Label Content="Kopien:" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="49"/>
+        <TextBox x:Name="CopyBox" HorizontalAlignment="Left" Height="26" Margin="64,45,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="62" FontSize="18" TextAlignment="Center"/>
+        <Label Content="Druckerreichweite:" HorizontalAlignment="Left" Margin="131,45,0,0" VerticalAlignment="Top" Width="116"/>
+        <TextBox x:Name="CBox" HorizontalAlignment="Left" Height="26" Margin="252,45,0,0" TextWrapping="Wrap" Text="1500" VerticalAlignment="Top" Width="62" FontSize="18" TextAlignment="Center" Background="Cyan"/>
+        <TextBox x:Name="MBox" HorizontalAlignment="Left" Height="26" Margin="319,45,0,0" TextWrapping="Wrap" Text="1500" VerticalAlignment="Top" Width="62" FontSize="18" TextAlignment="Center" TextChanged="TextBox_TextChanged" Background="Magenta"/>
+        <TextBox x:Name="YBox" HorizontalAlignment="Left" Height="26" Margin="386,45,0,0" TextWrapping="Wrap" Text="1500" VerticalAlignment="Top" Width="62" FontSize="18" TextAlignment="Center" Background="Yellow"/>
+        <TextBox x:Name="KBox" HorizontalAlignment="Left" Height="26" Margin="453,45,0,0" TextWrapping="Wrap" Text="2000" VerticalAlignment="Top" Width="62" FontSize="18" TextAlignment="Center" Background="Black" Foreground="White"/>
+        <Button x:Name="CreditsButton" Content="Credits" HorizontalAlignment="Left" Height="25" Margin="10,233,0,0" VerticalAlignment="Top" Width="116" Click="CreditsButton_Click"/>
+        <Button x:Name="SummeButton" Content="Summe bilden" HorizontalAlignment="Left" Height="25" Margin="131,233,0,0" VerticalAlignment="Top" Width="116" Click="SummeButton_Click"/>
+        <ComboBox x:Name="FormatCombo" HorizontalAlignment="Left" Margin="575,45,0,0" VerticalAlignment="Top" Width="95" Height="26" SelectedIndex="0" SelectionChanged="FormatCombo_SelectionChanged">
+            <ComboBoxItem Content="DIN A4"/>
+            <ComboBoxItem Content="DIN A5"/>
+            <ComboBoxItem Content="10cmx15cm"/>
+            <ComboBoxItem Content="Costum"/>
+        </ComboBox>
+        <Label Content="Format:" HorizontalAlignment="Left" Margin="520,45,0,0" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="FormatBox1" HorizontalAlignment="Left" Height="26" Margin="675,45,0,0" TextWrapping="Wrap" Text="210mm" VerticalAlignment="Top" Width="70" FontSize="16" TextAlignment="Center" LostFocus="FormatBox1_LostFocus"/>
+        <TextBox x:Name="FormatBox2" HorizontalAlignment="Left" Height="26" Margin="761,45,0,0" TextWrapping="Wrap" Text="297mm" VerticalAlignment="Top" Width="70" FontSize="18" TextAlignment="Center" LostFocus="FormatBox2_LostFocus"/>
+        <Label Content="X" HorizontalAlignment="Left" Margin="744,45,0,0" VerticalAlignment="Top" Width="18" Height="26"/>
+
+    </Grid>
+</Window>

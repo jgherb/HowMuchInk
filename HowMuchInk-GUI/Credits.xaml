@@ -1,0 +1,9 @@
+﻿<Window x:Class="HowMuchInk_GUI.Credits"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Credits" Height="314.885" Width="384.732">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="273" Width="357"><Run FontSize="20" FontFamily="Segoe Print" Text="HowMuchInk "/><Run FontSize="20" FontFamily="Segoe UI Light" Text="0.5-beta"/><LineBreak/><Run/><LineBreak/><Run FontSize="16" Text="ist eine Software, welche den vorraussichtlichen "/><Run FontWeight="Bold" FontSize="16" Text="Verbrauch"/><Run FontSize="16" Text=" an Druckertinte und Toner"/><Run FontSize="16" Text=" "/><Run FontWeight="Bold" FontSize="16" Text="berechnet"/><Run FontSize="16" Text="."/><LineBreak/><LineBreak/><Run FontSize="16" Text="Die Software einschließlich des Analyseverfahrens wurde von "/><Run FontWeight="Bold" FontSize="16" Text="Julius Herb"/><Run FontSize="16" Text=" entwickelt ("/><Run FontWeight="Bold" FontSize="16" Text="jgherb@live.de"/><Run FontSize="16" Text=")."/><LineBreak/><Run/><LineBreak/><Run Text="Für die PDF-Rasterung wird der Interpreter "/><Run FontWeight="Bold" Text="Ghostscript"/><Run Text=" verwendet."/><LineBreak/><Run/><LineBreak/><Run Text="Diese Version ist jediglich eine "/><Run FontWeight="Bold" Text="Beta"/><Run Text=" und kann bei fehlerhaften Parametern und Eingaben"/><Run Text=" möglicherweise"/><Run Text=" "/><Run FontWeight="Bold" Text="instabil"/><Run Text=" werden."/></TextBlock>
+
+    </Grid>
+</Window>
