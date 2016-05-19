@@ -21,7 +21,7 @@ namespace NCanalysis
         public static String author = "Julius Herb - julius.herb@outlook.com";
         #endregion
         #region Parameter
-        public String render_path = "C:\\Noscio\\HowMuchInk\\"; //Path, were the rendered images from the pdf files are saved
+        public String render_path = "C:\\Noscio\\HowMuchInk\\"; //Path, where the rendered images from the pdf files are saved
         #endregion
         #region Init
         public Dokument(String p, int[] _reichw)
